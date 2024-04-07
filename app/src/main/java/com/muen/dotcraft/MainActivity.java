@@ -308,6 +308,8 @@ public class MainActivity extends AppCompatActivity {
     // 提示过关
     private void congratulations() {
         Toast.makeText(this, "恭喜过关", Toast.LENGTH_SHORT).show();
+        level = new Level2();
+        refreshView();
     }
 
 }
