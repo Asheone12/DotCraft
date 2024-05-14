@@ -298,6 +298,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        return;
+    }
+
     /**
      * 限制一次只能滑动一格
      */
