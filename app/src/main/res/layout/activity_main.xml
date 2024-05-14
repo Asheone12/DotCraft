@@ -18,6 +18,18 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@color/bg_blue"
+        android:text="@string/text_back"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/game_container"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
     <RelativeLayout
         android:id="@+id/game_container"
         android:layout_width="300dp"

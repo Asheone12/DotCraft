@@ -37,6 +37,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         touchSlop = ViewConfiguration.get(this).getScaledTouchSlop();
 
+        Button btnBack = findViewById(R.id.back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         initDotViews();
         initContainerViews();
 
