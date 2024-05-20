@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         touchSlop = ViewConfiguration.get(this).getScaledTouchSlop();
 
-        Button btnBack = findViewById(R.id.back);
+        TextView btnBack = findViewById(R.id.back);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -193,10 +194,10 @@ public class MainActivity extends AppCompatActivity {
             ImageView dotView = dotViewArr[i];
             int[] location = new int[2];
             dotView.getLocationOnScreen(location);
-            int left = location[0];
-            int top = location[1];
-            int right = left + dotView.getWidth();
-            int bottom = top + dotView.getHeight();
+            int left = location[0] - dotView.getWidth();
+            int top = location[1] - dotView.getWidth();
+            int right = left + dotView.getWidth() * 2;
+            int bottom = top + dotView.getHeight() * 2;
             if (x >= left && x <= right && y >= top && y <= bottom) {
                 return i;
             }
